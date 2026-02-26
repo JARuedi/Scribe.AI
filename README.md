@@ -1,2 +1,2 @@
 # Scribe.AI
-Scribe.ai is an AI RAG system that allows a user to input a PDF and Scribe will make a bullet pointed. 
+Scribe.ai Uses a RAG pipeline with PyMuPDF and a local LLM to extract and rewrite PDF content into plain language.
