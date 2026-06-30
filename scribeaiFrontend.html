@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Scribe.ai</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="scribe_ai_logo.png">
+</head>
+<body>
+    <div class="container">
+        <img src="scribe_ai_logo.png" alt="Scribe Logo" class="logo">
+        <h1>Scribe.ai</h1>
+        <p class="tagline">Upload a PDF &mdash; get back a plain, easy-to-read version.</p>
+        <!--The two buttons, one to import and one to simplify-->
+        <div class="button-group">
+            <input type="file" id="pdfFile" accept=".pdf" hidden>
+            <label for="pdfFile" class="file-btn" id="fileLabel">Choose File</label>
+            <button onclick="uploadPDF()">Simplify</button>
+        </div>
+        <!--Download button-->
+        <button id="downloadBtn" style="display:none; margin-top: 14px; margin-left: 0;">
+            ⬇ Download Simplified Text
+        </button>
+        <div id="loadingContainer" style="display:none;">
+            <div class="loading-dots">
+                <span></span><span></span><span></span>
+            </div>
+            <p class="loading-text">Scribe is simplifying your document...</p>
+        </div>
+        <pre id="result"></pre>
+    </div>
+    <script src="asyncPDF.js"></script>
+</body>
+</html>
